@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABTdomain — Domain Intelligence Tools & Open Source</title>
-    <meta name="description" content="ABTdomain builds domain intelligence tools for investors, brand managers, and researchers. Home of DKSplit word segmentation and DomainKits MCP.">
-    <meta name="keywords" content="ABTdomain, DKSplit, DomainKits, domain intelligence, word segmentation, MCP server, domain names, BiLSTM-CRF, ONNX">
+    <title>ABTdomain Open Source — Domain Intelligence, Monitoring & Brand Protection Tools</title>
+    <meta name="description" content="ABTdomain is a domain intelligence platform that monitors over one million domain events daily. Explore our open-source tools including DKSplit word segmentation and DomainKits MCP server.">
+    <meta name="keywords" content="ABTdomain, DKSplit, DomainKits, domain intelligence, domain monitoring, brand protection, word segmentation, MCP server, BiLSTM-CRF, ONNX, Python, Go, NLP, newly registered domains, nameserver reverse lookup">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -20,25 +20,29 @@
             padding: 80px 20px;
             text-align: center;
         }
-        .hero .tagline {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    margin-bottom: 16px;
-    font-weight: 500;
-}
-.hero .desc {
-    font-size: 1.05rem;
-    opacity: 0.75;
-    max-width: 680px;
-    margin: 0 auto 32px;
-    line-height: 1.7;
-}
-.hero .links .primary {
-    background: rgba(255,255,255,0.15);
-    border-color: rgba(255,255,255,0.5);
-}
         .hero h1 { font-size: 2.8rem; margin-bottom: 12px; letter-spacing: -0.5px; }
-        .hero p { font-size: 1.2rem; opacity: 0.85; max-width: 600px; margin: 0 auto 30px; }
+        .hero .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .hero .desc {
+            font-size: 1.05rem;
+            opacity: 0.78;
+            max-width: 720px;
+            margin: 0 auto 16px;
+            line-height: 1.75;
+            text-align: left;
+            display: block;
+        }
+        .hero .desc strong {
+            color: #fff;
+            opacity: 1;
+        }
+        .hero .links {
+            margin-top: 28px;
+        }
         .hero .links a {
             display: inline-block;
             margin: 6px 8px;
@@ -51,6 +55,10 @@
             transition: background 0.2s;
         }
         .hero .links a:hover { background: rgba(255,255,255,0.1); }
+        .hero .links .primary {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.5);
+        }
         .section {
             max-width: 960px;
             margin: 0 auto;
@@ -61,6 +69,14 @@
             margin-bottom: 32px;
             text-align: center;
             color: #302b63;
+        }
+        .section .intro {
+            max-width: 720px;
+            margin: -16px auto 40px;
+            text-align: center;
+            font-size: 1rem;
+            color: #586069;
+            line-height: 1.7;
         }
         .cards {
             display: grid;
@@ -87,14 +103,15 @@
         .tag.go { background: #e8f5e9; color: #2e7d32; }
         .tag.mcp { background: #f3e5f5; color: #7b1fa2; }
         .card h3 { font-size: 1.3rem; margin-bottom: 8px; }
-        .card p { font-size: 0.95rem; color: #586069; margin-bottom: 16px; }
-        .card a {
+        .card p { font-size: 0.95rem; color: #586069; margin-bottom: 16px; line-height: 1.65; }
+        .card .card-links a {
             color: #302b63;
             font-weight: 600;
             text-decoration: none;
             font-size: 0.9rem;
+            margin-right: 16px;
         }
-        .card a:hover { text-decoration: underline; }
+        .card .card-links a:hover { text-decoration: underline; }
         .stats {
             display: flex;
             justify-content: center;
@@ -124,6 +141,7 @@
             font-size: 0.95rem;
             color: #5d4037;
         }
+        .security .notice a { color: #302b63; }
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -137,17 +155,25 @@
 <body>
 
 <div class="hero">
-    <h1>ABTdomain</h1>
-    <p class="tagline">Domain Intelligence Tools & Open Source</p>
+    <h1>ABTdomain Open Source</h1>
+    <p class="tagline">Domain Intelligence · Domain Monitoring · Brand Protection</p>
     <p class="desc">
-        We build tools that help brand managers, and researchers 
-        discover, analyze, and monitor domain names across their full lifecycle. 
-        Our open-source libraries power fast word segmentation for domain names, 
-        and our MCP server brings domain intelligence directly into AI workflows 
-        through Claude, Cursor, and other MCP-compatible clients.
+        <strong>ABTdomain</strong> is a domain intelligence platform that tracks
+        domain lifecycle changes across the internet. We monitor over one million
+        domain events daily — new registrations, expirations, ownership transfers,
+        and DNS changes — to provide structured, verifiable intelligence for
+        cybersecurity professionals, brand protection teams, and developers
+        working with domain data.
+    </p>
+    <p class="desc">
+        This page showcases our open-source tools and MCP integrations.
+        Below you will find our word segmentation libraries for analyzing
+        domain names programmatically, and our MCP server that brings domain
+        intelligence directly into AI-powered development workflows.
     </p>
     <div class="links">
-        <a href="https://domainkits.com" class="primary">DomainKits Platform</a>
+        <a href="https://abtdomain.com" class="primary">ABTdomain.com</a>
+        <a href="https://domainkits.com">DomainKits</a>
         <a href="https://github.com/ABTdomain">GitHub</a>
         <a href="https://pypi.org/project/dksplit/">PyPI</a>
         <a href="https://pkg.go.dev/github.com/ABTdomain/dksplit-go">pkg.go.dev</a>
@@ -156,32 +182,84 @@
 
 <div class="section">
     <h2>Open Source Projects</h2>
+    <p class="intro">
+        These tools were built from real problems we encountered while processing
+        and analyzing millions of domain names. We open-sourced them so that
+        developers, security researchers, and NLP engineers can use them in
+        their own projects.
+    </p>
     <div class="cards">
 
         <div class="card">
             <span class="tag python">Python</span>
             <h3>DKSplit</h3>
-            <p>Fast word segmentation for domain names and concatenated text. Powered by BiLSTM-CRF and ONNX Runtime.</p>
-            <a href="https://github.com/ABTdomain/dksplit">GitHub &rarr;</a>&nbsp;&nbsp;
-            <a href="https://pypi.org/project/dksplit/">PyPI &rarr;</a>
+            <p>
+                Word segmentation library that splits concatenated strings into
+                meaningful words. Built with a BiLSTM-CRF model trained on millions
+                of labeled samples covering domain names, brand names, and
+                multi-language phrases. The model is exported to ONNX format with
+                INT8 quantization for fast, lightweight inference. Useful for
+                domain name parsing, keyword extraction from URLs, SEO analysis,
+                and brand monitoring.
+            </p>
+            <div class="card-links">
+                <a href="https://github.com/ABTdomain/dksplit">GitHub →</a>
+                <a href="https://pypi.org/project/dksplit/">PyPI →</a>
+            </div>
         </div>
 
         <div class="card">
             <span class="tag go">Go</span>
             <h3>DKSplit-Go</h3>
-            <p>Go implementation of DKSplit. Up to 7,000 QPS in batch mode, 2.7x faster than the Python version.</p>
-            <a href="https://github.com/ABTdomain/dksplit-go">GitHub &rarr;</a>&nbsp;&nbsp;
-            <a href="https://pkg.go.dev/github.com/ABTdomain/dksplit-go">pkg.go.dev &rarr;</a>
+            <p>
+                Go implementation of DKSplit for high-throughput environments.
+                Handles up to 7,000 queries per second in batch mode and runs
+                2.7x faster than the Python version in single-query mode.
+                Designed for backend services, domain processing pipelines,
+                and applications where low latency and high concurrency matter.
+            </p>
+            <div class="card-links">
+                <a href="https://github.com/ABTdomain/dksplit-go">GitHub →</a>
+                <a href="https://pkg.go.dev/github.com/ABTdomain/dksplit-go">pkg.go.dev →</a>
+            </div>
         </div>
 
         <div class="card">
             <span class="tag mcp">MCP</span>
             <h3>DomainKits MCP</h3>
-            <p>MCP server for domain intelligence. Search newly registered domains and NS reverse lookup through Claude, Cursor, and other MCP clients.</p>
-            <a href="https://github.com/ABTdomain/domainkits-mcp">GitHub &rarr;</a>&nbsp;&nbsp;
-            <a href="https://domainkits.com">domainkits.com &rarr;</a>
+            <p>
+                Model Context Protocol server that connects ABTdomain's domain
+                intelligence data to AI assistants. Search newly registered domains
+                by keyword, perform nameserver reverse lookups, and query domain
+                statistics — all from within Claude, Cursor, or any MCP-compatible
+                client. Built for developers who want to integrate domain data
+                into AI-powered workflows without building custom integrations.
+            </p>
+            <div class="card-links">
+                <a href="https://github.com/ABTdomain/domainkits-mcp">GitHub →</a>
+                <a href="https://domainkits.com">domainkits.com →</a>
+            </div>
         </div>
 
+    </div>
+</div>
+
+<div class="stats">
+    <div class="stat">
+        <div class="num">1M+</div>
+        <div class="label">Domain events tracked daily</div>
+    </div>
+    <div class="stat">
+        <div class="num">7,000+</div>
+        <div class="label">QPS (DKSplit-Go batch)</div>
+    </div>
+    <div class="stat">
+        <div class="num">1,200+</div>
+        <div class="label">TLDs covered</div>
+    </div>
+    <div class="stat">
+        <div class="num">70M+</div>
+        <div class="label">Domains indexed</div>
     </div>
 </div>
 
@@ -195,9 +273,13 @@
 </div>
 
 <footer>
-    <p>&copy; 2025 ABTdomain &middot; <a href="https://domainkits.com">domainkits.com</a> &middot; <a href="https://github.com/ABTdomain">GitHub</a></p>
+    <p>
+        &copy; 2025 ABTdomain &middot;
+        <a href="https://abtdomain.com">ABTdomain.com</a> &middot;
+        <a href="https://domainkits.com">DomainKits</a> &middot;
+        <a href="https://github.com/ABTdomain">GitHub</a>
+    </p>
 </footer>
 
 </body>
 </html>
-```
